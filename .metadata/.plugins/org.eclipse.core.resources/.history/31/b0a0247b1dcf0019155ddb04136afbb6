@@ -1,0 +1,29 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Invoker {
+
+	Calculadora calculadora = new Calculadora();
+	List<Comando> comandos = 
+			new ArrayList<Comando>();
+	int comandoActual = 0;
+	
+	public void ejecuta(char operador, int operando) {
+		Comando comando = 
+				new ComandoCalculadora(
+						operador, operando, calculadora);
+		comando.ejecutar();
+		comandos.add(comando);
+		comandoActual++;		
+	}
+	
+	public void deshacer() {
+//		int comandoAdeshacer = comandoActual - 1;
+//		comandoActual--;
+		int comandoAdeshacer = comando--;
+		Comando comando = 
+	}
+
+}

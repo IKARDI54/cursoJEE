@@ -1,0 +1,9 @@
+package interceptores;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class InterceptorAdmin extends HandlerInterceptorAdapter{
+
+	
+	
+}

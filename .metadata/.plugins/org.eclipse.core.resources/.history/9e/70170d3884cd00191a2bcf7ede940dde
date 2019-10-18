@@ -1,0 +1,12 @@
+package modelo;
+
+import servicios.Apuesta;
+
+public class ApuestasDAOImpl {
+	
+	public boolean regitrarApuesta(Apuesta a) {
+		System.out.println("guardando en bd : " + a.toString());
+		
+	}
+
+}

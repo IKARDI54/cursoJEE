@@ -1,0 +1,21 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Rama extends Component{
+	
+	List<Component> hijos = 
+			new ArrayList<Component>();
+	
+	public Rama(String nombre) {
+		super(nombre);
+	}
+
+	@Override
+	public void add(Component c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

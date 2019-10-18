@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<a id="enlaceInicio" href="#">INICIO</a> 
+		<a id="enlaceNovedades" href="#">NOVEDADES</a> 
+		<a id="enlaceRegistrarNovedad" href="#">registra tu suceso</a>
+	</div>
+	<div id="contenedor">
+	
+	</div>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		
+		var novedades=[];
+	
+		$("#enlaceInicio").click(function() {
+			$.get("inicio.html",function(r){
+				$("#contenedor").html(r);
+			});
+		});
+		
+		$("#enlaceNovedades").click(function() {
+			//vamos a pedir al servlet las novedades:
+			$.getJSON("ServletNovedades",function(r){
+					console.log(r);
+					novedades = r;
+					var html = "";
+					for ( var indice in r) {
+						html += '<a class="detalles" id="'+
+								r[indice].id
+								+'" href="#">' + 
+								r[indice].titulo +
+								'</a><br/>';
+					}//forin
+					$("#contenedor").html(html);
+					$(".detalles").click(function(){ 
+						var id = $(this).attr("id");
+						alert("mostrar detalles de id: " + id);
+						var novedad = null;
+						for ( var i in novedades) {
+							if(novedades[i].id == id){
+								novedad = novedades[i];
+							}//end if
+						}//end for
+						$.get("detallesNovedad.html",function(r){
+							$("#contenedor").html(r);
+							$("#tituloNovedad").html(novedad.titulo);
+							$("#textoNovedad").html(novedad.titulo);
+						});
+					});
+			});//end getJSON
+		});//end click
+		
+		$("#enlaceRegistrarNovedad").click(function() {
+			$.get("registrarNovedad.html",function(r){
+				$("#contenedor").html(r);
+				$("#formRegistroNovedad").submit(function(){
+					alert("procesar formulario");
+					
+					var nuevo = $("#formRegistroNovedad").serializeArray();
+					var novedad = {};//objeto vacio de javascript
+					novedad.titulo = nuevo[0].value;
+					novedad.texto = nuevo[1].value;
+					var jsonString = JSON.stringify(novedad);
+					alert("voy a mandar al servlet: " + jsonString);
+					
+					//vamos a mandar por post la informacion introducida
+					$.post("ServletNovedades",{ json : jsonString },function(r){
+						alert("informacion mandada al servidor, "+
+								"respuesta: "+ r);
+					});
+					
+					//el return false cancela el envio del form
+					//hacia lo indicado en action, que es lo que
+					//hacíamos hasta ahora.
+					return false;
+				});//end submit
+			});//end $.get
+		});//end .click
+		
+		
+	</script>
+
+</body>
+</html>

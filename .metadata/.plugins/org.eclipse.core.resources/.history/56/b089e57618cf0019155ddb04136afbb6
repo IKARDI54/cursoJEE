@@ -1,0 +1,15 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Director ana = new Director();
+		Vicepresidente luis = 
+				new Vicepresidente();
+		Presidente mario = 
+				new Presidente();
+		
+		
+	}
+
+}

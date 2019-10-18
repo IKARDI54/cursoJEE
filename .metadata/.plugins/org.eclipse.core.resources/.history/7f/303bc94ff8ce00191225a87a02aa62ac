@@ -1,0 +1,11 @@
+package main;
+
+import externo.NaveMercenaria;
+
+public class NaveMercenariaAdapter {
+
+	private NaveMercenaria mercenaria;
+	
+	
+	
+}

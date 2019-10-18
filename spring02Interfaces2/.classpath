@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/aspectj-1.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/cglib-nodep-2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/com.springsource.org.aspectj.weaver-1.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-1.1.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-adapters-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/commons-logging-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/mysql-connector-java-5.1.24-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.aop-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.asm-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.aspects-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.beans-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.context.support-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.context-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.core-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.expression-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.instrument.tomcat-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.instrument-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.jdbc-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.jms-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.orm-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.oxm-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.test-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.transaction-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.web.portlet-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.web.servlet-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.web.struts-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AspireV15-00/Desktop/dist/org.springframework.web-3.1.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

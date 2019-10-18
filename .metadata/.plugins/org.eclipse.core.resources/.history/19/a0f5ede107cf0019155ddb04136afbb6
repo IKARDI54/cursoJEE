@@ -1,0 +1,9 @@
+package main;
+
+public class Jugador {
+
+	public void entrenar() {
+		System.out.println("jugador entrena");
+	}
+	
+}

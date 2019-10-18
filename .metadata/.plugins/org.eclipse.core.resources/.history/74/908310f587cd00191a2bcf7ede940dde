@@ -1,0 +1,13 @@
+package servicios;
+
+import java.util.List;
+
+public interface ServidorServicioApuestas {
+
+	boolean registrarApuesta(Apuesta a);
+
+	boolean resolverApuestas();//end resolver apuesta
+
+	List<Apuesta> obtenerApuestas();
+
+}

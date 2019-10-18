@@ -1,0 +1,10 @@
+package servicios;
+
+public class ServicioApuestas{
+	
+	public void registrarApuesta(int idUsuario,double cantidad) {
+		System.out.println("recibido idUsuario " + idUsuario +
+				"apuesta: " + cantidad);
+	}
+	
+}

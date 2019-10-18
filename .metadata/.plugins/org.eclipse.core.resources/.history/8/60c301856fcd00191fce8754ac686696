@@ -1,0 +1,14 @@
+package main;
+
+import servicios.InterfazServicioApuestasProxy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//para usar el servicio web generamos un proxy
+		InterfazServicioApuestasProxy proxy = 
+				new InterfazServicioApuestasProxy();
+		proxy.registrarApuesta(55, 250d);
+	}
+
+}

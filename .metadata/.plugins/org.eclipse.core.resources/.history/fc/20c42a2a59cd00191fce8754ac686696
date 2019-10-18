@@ -1,0 +1,17 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//las anotaciones no hacen nada, 
+		//no tienen codigo por dentro
+		//se usan para marcar clases, metodos etc.
+		
+		//y ahora otro codigo escanea que cosas tienen que 
+		//anotaciones, y ejecuta lo que haya que ejecutar 
+		//en consecuencia.
+		
+		
+	}
+
+}

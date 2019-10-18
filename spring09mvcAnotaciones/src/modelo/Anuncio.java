@@ -1,0 +1,89 @@
+package modelo;
+
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+public class Anuncio {
+
+	@NotEmpty(message = "titulo no puede estar vacio")
+	@Pattern(regexp = "[a-zA-Z ]{3,20}", message = "titulo no valido")
+	private String titulo;
+
+	@NotEmpty(message = "email no puede estar vacio")
+	private String email;
+
+	@Size(min = 1, max = 300, message = "descripcion debe tener entre 1 y 300 caracteres")
+	private String descripcion;
+
+	private CommonsMultipartFile fichero;
+
+	private int id;
+
+	public Anuncio() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Anuncio(String titulo, String email, String descripcion) {
+		super();
+		this.titulo = titulo;
+		this.email = email;
+		this.descripcion = descripcion;
+	}
+
+	public Anuncio(String titulo, String email, String descripcion, int id) {
+		super();
+		this.titulo = titulo;
+		this.email = email;
+		this.descripcion = descripcion;
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public CommonsMultipartFile getFichero() {
+		return fichero;
+	}
+
+	public void setFichero(CommonsMultipartFile fichero) {
+		this.fichero = fichero;
+	}
+
+	@Override
+	public String toString() {
+		return "Anuncio [titulo=" + titulo + ", email=" + email + ", descripcion=" + descripcion + ", id=" + id + "]";
+	}
+
+}

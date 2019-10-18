@@ -1,0 +1,9 @@
+package main;
+
+public class Rama extends Component{
+
+	public Rama(String nombre) {
+		super(nombre);
+	}
+
+}

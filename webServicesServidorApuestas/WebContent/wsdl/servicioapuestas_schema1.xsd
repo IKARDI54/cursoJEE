@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://servicios/" elementFormDefault="unqualified" targetNamespace="http://servicios/" version="1.0">
+<xs:element name="obtenerApuestas" type="tns:obtenerApuestas"/>
+<xs:element name="obtenerApuestasResponse" type="tns:obtenerApuestasResponse"/>
+<xs:element name="registrarApuesta" type="tns:registrarApuesta"/>
+<xs:element name="registrarApuestaResponse" type="tns:registrarApuestaResponse"/>
+<xs:element name="resolverApuestas" type="tns:resolverApuestas"/>
+<xs:element name="resolverApuestasResponse" type="tns:resolverApuestasResponse"/>
+<xs:complexType name="obtenerApuestas">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="obtenerApuestasResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:apuesta"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="apuesta">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:double"/>
+      <xs:element name="ganado" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element name="numero" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="resolverApuestas">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="resolverApuestasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="registrarApuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:apuesta"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="registrarApuestaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

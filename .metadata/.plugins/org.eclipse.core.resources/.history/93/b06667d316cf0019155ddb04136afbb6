@@ -1,0 +1,5 @@
+package patronesCHAIN;
+
+public abstract class Handler {
+
+}

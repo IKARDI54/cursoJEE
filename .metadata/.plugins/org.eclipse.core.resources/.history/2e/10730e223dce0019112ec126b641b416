@@ -1,0 +1,25 @@
+package daos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import modelo.Novedad;
+
+public class NovedadesDAOImpl {
+
+	private static List<Novedad> novedades = 
+			new ArrayList<Novedad>();
+	
+	static {
+		//bloque de codigo que sirve para preparar elementos
+		//static antes de que sean usados
+		novedades.add(new Novedad(
+				"nueva version de java", "cambios menores", 1));
+		
+	}
+	
+	public List<Novedad> obtenerNovedades(){
+		
+	}
+	
+}

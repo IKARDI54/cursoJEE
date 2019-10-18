@@ -1,0 +1,22 @@
+package servicios;
+
+import java.util.List;
+
+import modelo.ApuestasDAO;
+import modelo.ApuestasDAOImpl;
+
+public class ServicioApuestas {
+
+	private ApuestasDAO apuestasDAO = new ApuestasDAOImpl();
+	
+	public boolean registrarApuesta(Apuesta a ) {
+		System.out.println("recibido en el server: " + a);
+		apuestasDAO.regitrarApuesta(a);
+		return true;
+	}
+	
+	public List<Apuesta> obtenerApuestas(){
+		return apuestasDAO.obtenerApuestas();
+	}
+	
+}

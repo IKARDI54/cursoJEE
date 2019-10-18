@@ -1,0 +1,11 @@
+package servicios;
+
+public class ServicioApuestas {
+
+	public boolean registrarApuesta(Apuesta a ) {
+		
+		
+		return true;
+	}
+	
+}

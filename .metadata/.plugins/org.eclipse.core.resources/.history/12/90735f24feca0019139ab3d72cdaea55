@@ -1,0 +1,21 @@
+package constantes;
+
+public class ConstantesSQL {
+	
+	public final static String SQL_OBTENER_ANUNCIOS = 
+			"select * from tabla_anuncios order by id desc";
+	public static final String SQL_OBTENER_USUARIO_POR_EMAIL_Y_PASS = 
+		"select * from tabla_usuarios where email = ? and "
+		+ "pass= ?";
+	public static final String SQL_BORRAR_ANUNCIO = 
+			"delete from tabla_anuncios where id = ?";
+	public static final String SQL_OBTENER_ANUNCIO_POR_ID = 
+			"select * from tabla_anuncios where id= ?";
+	public static final String SQL_ACTUALIZAR_ANUNCIO = 
+			"update tabla_anuncios set titulo = ?, "
+			+ "email = ?, descripcion=? where id= ? ";
+	public static final String SQL_OBTENER_ANUNCIOS_INDICANDO_COMIENZO_Y_CUANTOS = 
+		"select * from tabla_anuncios where titulo like ? and "
+		+ " limit(?,?) order by id desc";
+	
+}

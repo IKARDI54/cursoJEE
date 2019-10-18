@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="javascript03ajax">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="context-root" value="javascript03ajax"/>
+        <property name="java-output-path" value="/javascript03ajax/build/classes"/>
+    </wb-module>
+</project-modules>

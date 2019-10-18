@@ -1,0 +1,14 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Usuario u = new Usuario("eva", "eva@gmail.com");
+		cambiarNombre(u, "isabel");
+	}
+	
+	private static void cambiarNombre(Usuario u, String nombre) {
+		
+	}
+
+}

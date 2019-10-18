@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://servicios/" elementFormDefault="unqualified" targetNamespace="http://servicios/" version="1.0">
+<xs:element name="registrarApuesta" type="tns:registrarApuesta"/>
+<xs:element name="registrarApuestaResponse" type="tns:registrarApuestaResponse"/>
+<xs:complexType name="registrarApuesta">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="registrarApuestaResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

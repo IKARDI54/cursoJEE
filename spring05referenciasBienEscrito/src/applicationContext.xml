@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="gestorArchivos" class="beans.GestorArchivos">
+	<property name="rutaRaiz" value="C:/archivos" />
+	<property name="gestorImagenes" ref="gestorImagenes"/>
+<!-- 	el ref anterior indica el id de la bean con la que  -->
+<!-- 	se va a quedar gImagenes -->
+</bean>
+
+<bean id="gestorImagenes" class="beans.GestorImagenes"/>
+
+
+</beans>
+
+
+

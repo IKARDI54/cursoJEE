@@ -1,0 +1,16 @@
+package main;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+public class MainObjetoAXML {
+
+	public static void main(String[] args) throws JAXBException {
+		Apuesta a = new Apuesta(4, 20, 100, "ruleta");
+		JAXBContext objetoJAXB = 
+				JAXBContext.newInstance(Apuesta.class);
+		Marshaller marshall = objetoJAXB.createMarshaller();
+		
+	}
+}

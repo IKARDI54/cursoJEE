@@ -1,0 +1,10 @@
+package main;
+
+public interface Jugador {
+	
+	public abstract void correr();
+	public abstract void parar();
+
+
+	
+}

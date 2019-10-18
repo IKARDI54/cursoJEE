@@ -1,0 +1,21 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Usuario u = new Usuario("eva", "eva@gmail.com");
+		cambiarNombre(u, "isabel");
+		System.out.println("nombre de u: " + u.getNombre());
+	}
+	
+	//si recibo en un metodo un objeto, no debo 
+	//instanciarlo de nuevo, ya que estare modificando ese
+	//nuevo y el que he recibido dejo de usarlo
+	private static void cambiarNombre(Usuario u, String nombre) {
+		Usuario original = u;
+		u = new Usuario(nombre, u.getEmail());
+		System.out.println("nombre de u dentro de "
+				+ "cambiar nombre: " + u.getNombre());
+	}
+
+}

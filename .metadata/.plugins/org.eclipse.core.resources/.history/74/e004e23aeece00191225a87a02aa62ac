@@ -1,0 +1,10 @@
+package main;
+
+public class GestorArchivosVideo {
+	//inicio singleton
+	
+	
+	
+	//fin singleton
+	//resto de codigo de la clase
+}

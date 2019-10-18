@@ -1,0 +1,6 @@
+package main;
+
+public class Delantero implements Jugador{
+
+	
+}

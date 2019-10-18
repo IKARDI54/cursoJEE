@@ -1,0 +1,17 @@
+package daos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import modelo.Novedad;
+
+public class NovedadesDAOImpl {
+
+	private static List<Novedad> novedades = 
+			new ArrayList<Novedad>();
+	
+	public List<Novedad> obtenerNovedades(){
+		
+	}
+	
+}

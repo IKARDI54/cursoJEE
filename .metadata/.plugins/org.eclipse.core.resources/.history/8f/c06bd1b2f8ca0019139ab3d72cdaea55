@@ -1,0 +1,18 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RegistrarMilAnuncios {
+
+	@Test
+	public void test() {
+		System.out.println("se inicia la unidad de testeo");
+		
+		
+		
+		System.out.println("fin de la unidad de testeo");
+	}
+
+}

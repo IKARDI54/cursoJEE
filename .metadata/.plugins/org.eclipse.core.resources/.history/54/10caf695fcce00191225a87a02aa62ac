@@ -1,0 +1,5 @@
+package patronesPROTOTYPE;
+
+public interface Jugador {
+
+}

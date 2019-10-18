@@ -1,0 +1,23 @@
+package main;
+
+public class EstadioFutbol extends Estadio{
+
+	@Override
+	public void sacarJugadoresAlcampo() {
+		System.out.println("sacando jugadores de futbol");
+	}
+
+	@Override
+	public void arrancarJuego() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void finalizarJuego() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

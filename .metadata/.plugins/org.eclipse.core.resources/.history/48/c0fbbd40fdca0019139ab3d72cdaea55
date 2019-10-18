@@ -1,0 +1,105 @@
+package daosImpl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.PostConstruct;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
+
+import constantes.ConstantesSQL;
+import constantes.NombresTablas;
+import daos.AnunciosDAO;
+import mappers.AnuncioMapper;
+import modelo.Anuncio;
+
+@Repository
+public class AnunciosDAOImpl implements AnunciosDAO{
+
+	//a diferencia de otros DAO realizados anteriormente
+	//vasmo a usar spring jdbc para facilitarnos la tarea
+	//con bases de datos. Para ello la clase actual necesita
+	//un DataSource. Un datasource no es mas que un elemento
+	//que tiene informacion para poder conectarse con una 
+	//base de datos.
+	
+	@Autowired
+	private DataSource miDataSource;
+	private SimpleJdbcInsert simpleInsert;
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public int registrarAnuncio(Anuncio a) {
+		//vamos a usar el simple jdbc insert, que es un recurso
+		//de spring jdbc, el cual ha necesitado de un data source
+		int idGenerado = -1;
+		Map<String, Object> valores = 
+				new HashMap<String, Object>();
+		valores.put("titulo", a.getTitulo());
+		valores.put("email",a.getEmail());
+		valores.put("descripcion", a.getDescripcion());
+		simpleInsert.usingGeneratedKeyColumns("id");
+		idGenerado = 
+			simpleInsert.executeAndReturnKey(valores).intValue();
+		return idGenerado;
+	}
+
+	@Override
+	public List<Anuncio> obtenerAnuncios() {
+		//spring jdbc nos pide en una clase tipo Mapper
+		//como transformar de un resultado de base de datos
+		//de la tabla_anuncios a un objeto de la clase Anuncio
+		//una vez tengamos esa clase, va a ser muy facil 
+		//obtener datos.
+		
+		List<Anuncio> anuncios = 
+				jdbcTemplate.query(
+					ConstantesSQL.SQL_OBTENER_ANUNCIOS,
+					new AnuncioMapper());
+		
+		
+		return anuncios;
+	}
+	
+	//una vez asignadas todas las propiedades, ya sea por 
+	//@Autowire @Resource o de cualquier otra forma
+	//se ejecuta el metodo marcado con @PostConstruct
+	@PostConstruct
+	public void prepararSimpleInsertYJDBCtemplate() {
+		simpleInsert = new SimpleJdbcInsert(miDataSource);
+		simpleInsert.setTableName(NombresTablas.TABLA_ANUNCIOS);
+		jdbcTemplate = new JdbcTemplate(miDataSource);
+	}
+
+	@Override
+	public void borrarAnuncio(int id) {
+		jdbcTemplate.update(ConstantesSQL.SQL_BORRAR_ANUNCIO,id);
+	}
+
+	@Override
+	public Anuncio obtenerAnuncioPorId(int id) {
+		
+		Anuncio a = 
+				jdbcTemplate.queryForObject( 
+						ConstantesSQL.SQL_OBTENER_ANUNCIO_POR_ID,
+						new AnuncioMapper(),id);
+		
+		return a;
+	}
+
+	@Override
+	public void actualizarAnuncio(Anuncio anuncioAeditar) {
+		jdbcTemplate.update(
+				ConstantesSQL.SQL_ACTUALIZAR_ANUNCIO,
+				anuncioAeditar.getTitulo(),
+				anuncioAeditar.getDescripcion(),
+				anuncioAeditar.getEmail(),
+				anuncioAeditar.getId());		
+	}
+
+}

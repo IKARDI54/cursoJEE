@@ -1,0 +1,69 @@
+package main;
+
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Apuesta {
+
+	@XmlAttribute
+	private int id;
+	@XmlElement(name= "idusuario")
+	private int idUsuario;
+	@XmlElement
+	private double cantidad;
+	@XmlElement
+	private String nombreJuego;
+
+	public Apuesta() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Apuesta(int id, int idUsuario, double cantidad, String nombreJuego) {
+		super();
+		this.id = id;
+		this.idUsuario = idUsuario;
+		this.cantidad = cantidad;
+		this.nombreJuego = nombreJuego;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public double getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(double cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	public String getNombreJuego() {
+		return nombreJuego;
+	}
+
+	public void setNombreJuego(String nombreJuego) {
+		this.nombreJuego = nombreJuego;
+	}
+
+	@Override
+	public String toString() {
+		return "Apuesta [id=" + id + ", idUsuario=" + idUsuario + ", cantidad=" + cantidad + ", nombreJuego="
+				+ nombreJuego + "]";
+	}
+
+}

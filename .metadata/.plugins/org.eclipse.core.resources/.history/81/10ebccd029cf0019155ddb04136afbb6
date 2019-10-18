@@ -1,0 +1,5 @@
+package serviciosHibernate;
+
+public class ServicioAnunciosImpl implements ServicioAnuncios{
+
+}

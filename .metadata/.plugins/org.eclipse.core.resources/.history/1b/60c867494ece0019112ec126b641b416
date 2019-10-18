@@ -1,0 +1,5 @@
+<form>
+titulo: <input name="titulo" type="text"/><br/>
+texto: <textarea name="texto" rows="4" cols="20"></textarea><br/>
+<input type="submit" value="REGISTRAR SUCESO"/>
+</form>

@@ -1,0 +1,47 @@
+package servicios;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
+
+import modelo.ApuestasDAO;
+import modelo.ApuestasDAOImpl;
+
+public class ServicioApuestas {
+
+	private ApuestasDAO apuestasDAO = new ApuestasDAOImpl();
+	private Date datePrimeraApuesta = null;
+	private boolean apuestasResueltas = false;
+	
+	public boolean registrarApuesta(Apuesta a ) {
+		System.out.println("recibido en el server: " + a);
+		apuestasDAO.regitrarApuesta(a);
+		if(datePrimeraApuesta == null) {
+			datePrimeraApuesta = new Date();
+		}
+		return true;
+	}
+	
+	public boolean resolverApuestas() {
+		if(!apuestasResueltas) {
+			Date ahora = new Date();
+			if( 
+			(ahora.getTime()-datePrimeraApuesta.getTime()) >
+				30000) {
+				Random r = new Random();
+				int numeroGanador = r.nextInt(36)+1;
+				for (Apuesta a  : 
+						apuestasDAO.obtenerApuestas()) {
+					
+				}
+			}
+		}
+	}
+	
+	public List<Apuesta> obtenerApuestas(){
+		return apuestasDAO.obtenerApuestas();
+	}
+	
+	
+	
+}

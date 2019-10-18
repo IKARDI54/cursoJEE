@@ -1,0 +1,20 @@
+package modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import servicios.Apuesta;
+
+public class ApuestasDAOImpl {
+	
+	private static List<Apuesta> apuestas = 
+			new ArrayList<Apuesta>();
+	
+	public boolean regitrarApuesta(Apuesta a) {
+		//poner toString o no ponerlo al concatenar con 
+		//un texto es lo mismo.
+		System.out.println("guardando en bd : " + a);
+		
+	}
+
+}

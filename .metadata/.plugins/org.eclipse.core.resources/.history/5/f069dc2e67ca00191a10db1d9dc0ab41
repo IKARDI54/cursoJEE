@@ -1,0 +1,21 @@
+package controladores.admin;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ControladorLoginAdmin {
+	
+	@RequestMapping("loginAdmin")
+	public String loginAdmin() {
+		return "loginAdmin";
+	}
+	
+	@RequestMapping("identificarAdmin")
+	public String identificarAdmin(String pass) {
+		if(pass.equals("123")) {
+			
+		}
+	}
+	
+}

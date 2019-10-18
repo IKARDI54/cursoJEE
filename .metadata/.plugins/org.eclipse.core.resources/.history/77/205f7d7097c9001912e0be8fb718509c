@@ -1,0 +1,17 @@
+package controladores.admin;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import daos.AnunciosDAO;
+
+@Controller
+public class ControladorAnuncios {
+
+	@Autowired
+	private AnunciosDAO anunciosDAO;
+	
+	@RequestMapping("admin/anuncios")
+	
+}

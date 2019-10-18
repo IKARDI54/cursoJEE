@@ -1,0 +1,8 @@
+package main;
+
+public @interface Servicio {
+	//una anotacion no puede contener metodos con codigo
+//	public void arrancar() {
+//		
+//	}
+}

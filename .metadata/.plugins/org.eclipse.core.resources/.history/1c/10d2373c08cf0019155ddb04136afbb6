@@ -1,0 +1,12 @@
+package main;
+
+public class Jugador {
+
+	public void entrenar() {
+		System.out.println("jugador entrena");
+	}
+	
+	public void descansar() {
+		System.out.println("jugador se toma un descanso");
+	}
+}

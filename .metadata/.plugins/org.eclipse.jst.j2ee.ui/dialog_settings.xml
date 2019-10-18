@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="J2EE_EXPORT_OVERWRITE" value="true"/>
+	<item key="J2EE_EXPORT_SOURCE" value="true"/>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v8.5"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Users\AspireV15-00\Desktop\BASE_SPRING.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\ejercicioAJAX.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\ultimo\webServicesServidorApuestas.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\springPaginacionBuscador.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\springMultiIdiomaYproteccionAdmin.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\springAdministracionEnlacesCorregidos.war"/>
+	</list>
+	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\AspireV15-00\Desktop\BASE_SPRING.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\spring09mvcAnotaciones.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\spring06mvc.war"/>
+		<item value="C:\Users\AspireV15-00\Desktop\cursoJEE03aplicacionRegistroIdentificacion.war"/>
+	</list>
+</section>

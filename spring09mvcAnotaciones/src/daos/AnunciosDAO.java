@@ -1,0 +1,12 @@
+package daos;
+
+import java.util.List;
+
+import modelo.Anuncio;
+
+public interface AnunciosDAO {
+
+	public int registrarAnuncio(Anuncio a);
+	public List<Anuncio> obtenerAnuncios();
+	
+}

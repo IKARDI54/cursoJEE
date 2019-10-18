@@ -1,0 +1,34 @@
+package main;
+
+public class ComandoCalculadora extends Comando{
+
+	char operador;
+	int operando;
+	Calculadora calculadora;
+
+	public ComandoCalculadora(char operador, int operando, Calculadora calculadora) {
+		super();
+		this.operador = operador;
+		this.operando = operando;
+		this.calculadora = calculadora;
+	}
+
+	@Override
+	public void ejecutar() {
+		calculadora.operar(operador, operando);
+	}
+
+	@Override
+	public void deshacer() {
+		char operadorInverso = 0;
+		switch (key) {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
+	}//end deshacer
+
+}

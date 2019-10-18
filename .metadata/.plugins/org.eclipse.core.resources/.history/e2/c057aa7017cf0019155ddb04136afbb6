@@ -1,0 +1,8 @@
+package main;
+
+public class Compra {
+	
+	private String proposito;
+	private double cantidad;
+	
+}

@@ -1,0 +1,11 @@
+package main;
+
+public class Director extends Handler{
+
+	@Override
+	public void procesarPeticion() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

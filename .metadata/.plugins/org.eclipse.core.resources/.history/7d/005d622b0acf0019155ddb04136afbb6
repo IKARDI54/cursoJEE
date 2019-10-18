@@ -1,0 +1,11 @@
+package main;
+
+public abstract class Estadio {
+
+	public void comenzarJuego() {
+		sacarJugadoresAlcampo();
+		
+	}
+	
+	private abstract void sacarJugadoresAlCampo();
+}

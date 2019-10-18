@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ServicioApuestasService" targetNamespace="http://servicios/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://servicios/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://servicios/" schemaLocation="servicioapuestas_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="registrarApuesta">
+    <wsdl:part name="parameters" element="tns:registrarApuesta">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarApuestaResponse">
+    <wsdl:part name="parameters" element="tns:registrarApuestaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="InterfazServicioApuestas">
+    <wsdl:operation name="registrarApuesta">
+      <wsdl:input name="registrarApuesta" message="tns:registrarApuesta">
+    </wsdl:input>
+      <wsdl:output name="registrarApuestaResponse" message="tns:registrarApuestaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioApuestasServiceSoapBinding" type="tns:InterfazServicioApuestas">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="registrarApuesta">
+      <soap:operation soapAction="urn:RegistrarApuesta" style="document"/>
+      <wsdl:input name="registrarApuesta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registrarApuestaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioApuestasService">
+    <wsdl:port name="ServicioApuestasPort" binding="tns:ServicioApuestasServiceSoapBinding">
+      <soap:address location="http://localhost:8080/webServices01/services/ServicioApuestasPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

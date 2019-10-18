@@ -1,0 +1,83 @@
+package controladores;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import daos.AnunciosDAO;
+import modelo.Anuncio;
+
+@Controller
+public class ControladorRegistroAnuncio {
+	
+	@Resource
+	private AnunciosDAO miAnunciosDAO;
+	@Resource
+	private ControladorInicio controladorInicio;
+
+	@RequestMapping("prepararRegistro")
+	public String prepararRegistro(Map model) {
+		System.out.println("preparar registro de anuncio");
+		//"nuevoAnuncio" es el commandName del form de spring
+		//y no es mas que el objeto que esta esperando el form
+		//para poder mostrar su informacion en él.
+		//Esto es obligatorio y si le damos directamente
+		//un new Anuncios(), al form le llega un nuevo 
+		//objeto de la clase Anuncio sin informacion.
+		model.put("nuevoAnuncio", new Anuncio());
+		return "registrarAnuncio";
+	}//end prepararregistro
+	
+	@RequestMapping("guardarAnuncio")
+	public String guardarAnuncio(@ModelAttribute("nuevoAnuncio") @Valid Anuncio nuevoAnuncio, BindingResult result,Map model) {
+		//una gran ventaja de usar spring mvc, es que 
+		//este metodo recibe automaticamente un objeto
+		//con todo lo que ha introducido el usuario en el form
+		System.out.println("he recibido: " + 
+				nuevoAnuncio.toString());
+		
+		if(result.hasErrors()) {
+			//hay que volver a mandar un objeto al form
+			//con lo que queramos que muestre
+			model.put("nuevoAnuncio", nuevoAnuncio);
+			return "registrarAnuncio";
+			
+		}else {
+		
+			int idGenerado = 
+				miAnunciosDAO.registrarAnuncio(nuevoAnuncio);
+			//voy a quedarme con el id generado para 
+			//guardar el archivo que se ha subido
+			File localFile = 
+				new File("C:/subidasJava/"+idGenerado+".jpg");
+			FileOutputStream os = null;
+			
+			try {
+				os = new FileOutputStream(localFile);
+				os.write(nuevoAnuncio.getFichero().getBytes());
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}catch (IOException ioe) {
+				ioe.printStackTrace();
+			}
+			
+			System.out.println("anuncio registrado ok");
+			
+			return controladorInicio.inicio(model,"",0);
+		}
+		
+	}//end guardarAnuncio
+
+	
+}//end class

@@ -1,0 +1,7 @@
+package servicios;
+
+public interface ServicioOrdenadores {
+
+	void registrarCompra(Ordenador ordenador);
+
+}

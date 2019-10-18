@@ -1,0 +1,17 @@
+package main;
+
+public class Delantero extends Jugador{
+
+	@Override
+	public void correr() {
+		System.out.println("delantero corre");
+	}
+
+	@Override
+	public void parar() {
+		System.out.println("delantero para");
+	}
+
+
+
+}

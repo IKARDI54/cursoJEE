@@ -1,0 +1,15 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//en java los tipos basicos de dato se tratan de forma
+		//distinta a los objetos
+		int x = 10;
+		Usuario u = new Usuario("Juan","juan@gmail.com");
+		
+	}
+	
+	
+
+}

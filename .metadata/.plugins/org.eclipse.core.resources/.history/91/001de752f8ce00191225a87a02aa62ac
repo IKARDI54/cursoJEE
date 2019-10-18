@@ -1,0 +1,16 @@
+package main;
+
+import externo.NaveMercenaria;
+
+public class NaveMercenariaAdapter {
+
+	private NaveMercenaria mercenaria;
+
+	public NaveMercenariaAdapter(NaveMercenaria mercenaria) {
+		super();
+		this.mercenaria = mercenaria;
+	}
+	
+	
+	
+}

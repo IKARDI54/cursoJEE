@@ -1,0 +1,50 @@
+package servicios;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Random;
+
+import javax.jws.WebService;
+
+import modelo.ApuestasDAO;
+import modelo.ApuestasDAOImpl;
+
+@WebService(targetNamespace = "http://servicios/", endpointInterface = "servicios.ServidorServicioApuestas", portName = "ServicioApuestasPort", serviceName = "ServicioApuestasService")
+public class ServicioApuestas implements ServidorServicioApuestas {
+
+	private ApuestasDAO apuestasDAO = new ApuestasDAOImpl();
+	private Date datePrimeraApuesta = null;
+	private boolean apuestasResueltas = false;
+	
+	public boolean registrarApuesta(Apuesta a ) {
+		System.out.println("recibido en el server: " + a);
+		apuestasDAO.regitrarApuesta(a);
+		if(datePrimeraApuesta == null) {
+			datePrimeraApuesta = new Date();
+		}
+		return true;
+	}
+	
+	public int resolverApuestas() {
+		if(!apuestasResueltas) {
+			Date ahora = new Date();
+			if( 
+			(ahora.getTime()-datePrimeraApuesta.getTime()) >
+				30000) {
+				Random r = new Random();
+				int numeroGanador = r.nextInt(36)+1;
+				apuestasDAO.
+					marcarApuestaComoGanadora(numeroGanador);
+				apuestasResueltas = true;
+			}//end if
+		}//end if
+		return apuestasResueltas;
+	}//end resolver apuesta
+	
+	public List<Apuesta> obtenerApuestas(){
+		return apuestasDAO.obtenerApuestas();
+	}
+	
+	
+	
+}

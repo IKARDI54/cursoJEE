@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;spring03Propiedades&apos;&#x0D;&#x0A;- Original project: &apos;spring03Propiedades&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     beans.PeliculasDAO.java&#x0D;&#x0A;     beans.PeliculasDAOImpl.java&#x0D;&#x0A;     beans.PeliculasDAOmysqlImpl.java&#x0D;&#x0A;     beans.PeliculasDAOoracleImpl.java" description="Delete elements" element1="/src&lt;beans{PeliculasDAOImpl.java" element2="/src&lt;beans{PeliculasDAOoracleImpl.java" element3="/src&lt;beans{PeliculasDAO.java" element4="/src&lt;beans{PeliculasDAOmysqlImpl.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1566812425363" subPackages="false" version="1.0"/>
+</session>

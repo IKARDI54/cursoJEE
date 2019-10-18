@@ -1,0 +1,9 @@
+package servicios;
+
+public class ServicioApuestas {
+	
+	public void registrarApuesta(int idUsuario,double cantidad) {
+		
+	}
+	
+}

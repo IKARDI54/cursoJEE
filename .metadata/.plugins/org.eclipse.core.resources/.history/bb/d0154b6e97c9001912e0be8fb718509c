@@ -1,0 +1,15 @@
+package controladores.admin;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import daos.AnunciosDAO;
+
+@Controller
+public class ControladorAnuncios {
+
+	@Autowired
+	private AnunciosDAO anunciosDAO;
+	
+	
+}

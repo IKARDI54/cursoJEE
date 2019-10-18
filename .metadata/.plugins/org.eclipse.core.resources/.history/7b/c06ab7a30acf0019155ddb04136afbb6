@@ -1,0 +1,16 @@
+package main;
+
+//esta es la clase template
+public abstract class Estadio {
+
+	public void comenzarJuego() {
+		sacarJugadoresAlcampo();
+		System.out.println("esperando a que todo el "
+				+ "mundo este preparado");
+		arrancarJuego();
+		System.out.println("esperando a que juego termine");
+		finalizarJuego();		
+	}
+	
+	public abstract void sacarJugadoresAlcampo();
+}

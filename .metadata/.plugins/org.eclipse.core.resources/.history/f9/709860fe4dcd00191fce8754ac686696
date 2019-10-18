@@ -1,0 +1,14 @@
+package prueba;
+
+public class Main {
+	public static void main(String[] args) {
+		JAXBContext contextObj = JAXBContext.newInstance(Employee.class);
+
+		Marshaller marshallerObj = contextObj.createMarshaller();
+		marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+		Employee emp1 = new Employee(1, "Vimal Jaiswal", 50000);
+
+		marshallerObj.marshal(emp1, new FileOutputStream("employee.xml"));
+	}
+}

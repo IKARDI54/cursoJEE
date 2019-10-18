@@ -1,0 +1,9 @@
+package main;
+
+public abstract class Jugador {
+	
+	public abstract void correr();
+	public abstract void parar();
+
+	
+}

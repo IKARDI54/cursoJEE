@@ -1,0 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+ 
+<div>
+<a href="admin/anuncios">Gestorionar Anuncios</a> 
+<a href="admin/servicios">Gestorionar Servicios</a> 
+<a href="admin/usuarios">Gestorionar usuarios</a> 
+</div>

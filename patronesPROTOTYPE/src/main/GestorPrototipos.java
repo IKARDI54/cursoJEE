@@ -1,0 +1,26 @@
+package main;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class GestorPrototipos {
+	
+	Map<String, Jugador> prototipos = 
+			new HashMap<String, Jugador>();
+	
+	public Jugador crearJugador(String tipo) {
+		if(!prototipos.containsKey(tipo)) {
+			if(tipo.equals("delantero")) {
+				prototipos.put("delantero", new Delantero());
+				System.out.println("creado delantero y metido"
+						+ " en prototipos");
+			}else if(tipo.equals("portero")) {
+				prototipos.put("portero", new Portero());
+				System.out.println("creado portero y metido "
+						+ "en prototipos");
+			}
+		}//end if !prototipos.contains key
+		return prototipos.get(tipo).clonar();	
+	}//end crearJugador
+	
+}

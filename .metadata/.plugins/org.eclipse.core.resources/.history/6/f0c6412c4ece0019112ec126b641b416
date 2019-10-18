@@ -1,0 +1,4 @@
+<form>
+titulo: <input name="titulo" type="text"/><br/>
+texto: <textarea name="texto" rows="4" cols="20"></textarea>
+</form>

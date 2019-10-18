@@ -1,0 +1,11 @@
+package main;
+
+public class Presidente extends Handler{
+
+	@Override
+	public void procesarPeticion(Compra c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

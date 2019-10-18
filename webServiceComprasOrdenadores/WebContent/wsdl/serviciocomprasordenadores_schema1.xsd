@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://servicios/" elementFormDefault="unqualified" targetNamespace="http://servicios/" version="1.0">
+<xs:element name="registrarCompra" type="tns:registrarCompra"/>
+<xs:element name="registrarCompraResponse" type="tns:registrarCompraResponse"/>
+<xs:complexType name="registrarCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ordenador"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="ordenador">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:double"/>
+      <xs:element minOccurs="0" name="comprador" type="xs:string"/>
+      <xs:element minOccurs="0" name="producto" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="registrarCompraResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>

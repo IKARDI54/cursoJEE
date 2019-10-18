@@ -1,0 +1,17 @@
+package main;
+
+import facade.GestorHipotecas;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int idCliente = 44;
+		GestorHipotecas gh = new GestorHipotecas();
+		boolean resultado = 
+				gh.concederHipoteca(50000, idCliente);
+		System.out.println("resultado de "
+				+ "conceder hipoteca: " + resultado);		
+	}
+
+}

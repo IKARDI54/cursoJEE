@@ -1,0 +1,18 @@
+package main;
+
+public class Calculadora {
+	
+	int valorActual;
+	
+	public void operar(char operador,int operando) {
+		switch (operador) {
+		case '+':
+			valorActual += operando;
+			break;
+
+		default:
+			break;
+		}
+	}
+	
+}

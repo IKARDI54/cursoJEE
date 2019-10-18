@@ -1,0 +1,13 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		GestorArchivosVideo gav = 
+				GestorArchivosVideo.obtenerInstancia();
+		GestorArchivosVideo gav2 = 
+				GestorArchivosVideo.obtenerInstancia();
+		//ambos elementos son la misma instancia
+	}
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<a id="enlaceInicio" href="#">INICIO</a> 
+		<a id="enlaceNovedades" href="#">NOVEDADES</a> 
+		<a id="enlaceRegistrarNovedad" href="#">registra tu suceso</a>
+	</div>
+	<div id="contenedor">
+	
+	</div>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		
+		$("#enlaceInicio").click(function() {
+			$.get("inicio.html",function(r){
+				$("#contenedor").html(r);
+			});
+		});
+		
+		$("#enlaceNovedades").click(function() {
+			//vamos a pedir al servlet las novedades:
+			$.getJSON("ServletNovedades",function(r){
+					console.log(r);
+					var html = "";
+					for ( var indice in r) {
+						html += '<a href="#">' + 
+								r[indice].titulo +
+								'</a><br/>';
+					}//forin
+					$("#contenedor").html(html);
+			});//end getJSON
+		});//end click
+		
+		$("#enlaceRegistrarNovedad").click(function() {
+			$.get("registrarNovedad.html",function(r){
+				$("#contenedor").html(r);
+				$("#formRegistroNovedad").submit(function(){
+					alert("procesar formulario");
+					
+					var nuevo = $("#formRegistroNovedad").serializeArray();
+					console.log("nuevo vale:");
+					console.log(nuevo);
+					console.log("titulo: "+ nuevo[0].value);
+					
+					//el return false cancela el envio del form
+					//hacia lo indicado en action, que es lo que
+					//hacíamos hasta ahora.
+					return false;
+				});//end submit
+			});//end $.get
+		});//end .click
+		
+		
+	</script>
+
+</body>
+</html>

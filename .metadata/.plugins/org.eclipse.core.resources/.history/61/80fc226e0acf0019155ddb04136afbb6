@@ -1,0 +1,12 @@
+package main;
+
+//esta es la clase template
+public abstract class Estadio {
+
+	public void comenzarJuego() {
+		sacarJugadoresAlcampo();
+		
+	}
+	
+	public abstract void sacarJugadoresAlcampo();
+}

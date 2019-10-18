@@ -1,0 +1,16 @@
+package main;
+
+public class Portero implements Jugador,Cloneable{
+
+	@Override
+	public void correr() {
+		System.out.println("portero corre");
+	}
+
+	@Override
+	public void parar() {
+		System.out.println("portero se para");
+	}
+
+	
+}

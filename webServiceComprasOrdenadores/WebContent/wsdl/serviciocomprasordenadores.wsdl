@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ServicioComprasOrdenadoresService" targetNamespace="http://servicios/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://servicios/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://servicios/" schemaLocation="serviciocomprasordenadores_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="registrarCompra">
+    <wsdl:part name="parameters" element="tns:registrarCompra">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarCompraResponse">
+    <wsdl:part name="parameters" element="tns:registrarCompraResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioOrdenadores">
+    <wsdl:operation name="registrarCompra">
+      <wsdl:input name="registrarCompra" message="tns:registrarCompra">
+    </wsdl:input>
+      <wsdl:output name="registrarCompraResponse" message="tns:registrarCompraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioComprasOrdenadoresServiceSoapBinding" type="tns:ServicioOrdenadores">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="registrarCompra">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registrarCompra">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registrarCompraResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioComprasOrdenadoresService">
+    <wsdl:port name="ServicioComprasOrdenadoresPort" binding="tns:ServicioComprasOrdenadoresServiceSoapBinding">
+      <soap:address location="http://localhost:8080/webServiceComprasOrdenadores/services/ServicioComprasOrdenadoresPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

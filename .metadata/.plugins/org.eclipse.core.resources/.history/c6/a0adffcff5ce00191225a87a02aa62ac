@@ -1,0 +1,9 @@
+package main;
+
+public class PastelFactory {
+	
+	public Pastel crearPastel(String nombre) {
+		
+	}
+	
+}

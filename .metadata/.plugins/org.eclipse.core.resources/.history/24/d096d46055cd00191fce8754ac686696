@@ -1,0 +1,17 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Usuario u = new Usuario("eva", "eva@gmail.com");
+		cambiarNombre(u, "isabel");
+		System.out.println("nombre de u: " + u.getNombre());
+	}
+	
+	private static void cambiarNombre(Usuario u, String nombre) {
+		u = new Usuario(nombre, u.getEmail());
+		System.out.println("nombre de u dentro de "
+				+ "cambiar nombre: " + u.getNombre());
+	}
+
+}

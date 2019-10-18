@@ -1,0 +1,15 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		List<Nave> flota = new ArrayList<Nave>();
+		Nave caza = new Nave();
+		Nave crucero = new Nave();
+		
+		
+	}
+}

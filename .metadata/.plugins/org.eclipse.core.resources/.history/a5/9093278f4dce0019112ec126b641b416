@@ -1,0 +1,6 @@
+si tienes dudas rellena el siguiente form:
+<form>
+	email: <input type="email"/><br/>
+	duda: <textarea rows="5" cols="16"></textarea><br/>
+	<input type="submit" value="ENVIAR"/>
+</form>

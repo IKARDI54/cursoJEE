@@ -1,0 +1,14 @@
+package modelo;
+
+import servicios.Apuesta;
+
+public class ApuestasDAOImpl {
+	
+	public boolean regitrarApuesta(Apuesta a) {
+		//poner toString o no ponerlo al concatenar con 
+		//un texto es lo mismo.
+		System.out.println("guardando en bd : " + a);
+		
+	}
+
+}

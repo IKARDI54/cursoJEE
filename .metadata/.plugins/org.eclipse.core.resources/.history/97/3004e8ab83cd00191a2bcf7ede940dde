@@ -1,0 +1,16 @@
+package servicios;
+
+public class Apuesta {
+
+	private String nombre;
+	private double cantidad;
+	private int numero;
+	private boolean ganado;
+	
+	public Apuesta() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

@@ -1,0 +1,15 @@
+package servicios;
+
+import modelo.ApuestasDAO;
+import modelo.ApuestasDAOImpl;
+
+public class ServicioApuestas {
+
+	private ApuestasDAO apuestasDAO = new ApuestasDAOImpl();
+	
+	public boolean registrarApuesta(Apuesta a ) {
+		apuestasDAO.regitrarApuesta(a);
+		return true;
+	}
+	
+}

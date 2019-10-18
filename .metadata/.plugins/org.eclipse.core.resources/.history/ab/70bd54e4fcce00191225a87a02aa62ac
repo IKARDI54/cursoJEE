@@ -1,0 +1,18 @@
+package main;
+
+public class Delantero implements Jugador{
+
+	@Override
+	public void correr() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void parar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

@@ -1,0 +1,15 @@
+package main;
+
+//T mayuscula sera lo que digamos cuando 
+//usemos esta clase
+public class Listado<T> {
+
+	private T t;
+	private String nombre;
+	
+	public void mostrarDatosDeLaClase() {
+		System.out.println("nombre es de tipo: " +
+				nombre.getClass().getName());
+	}
+	
+}

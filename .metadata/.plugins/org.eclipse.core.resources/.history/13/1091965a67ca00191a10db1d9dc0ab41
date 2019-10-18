@@ -1,0 +1,24 @@
+package controladores.admin;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ControladorLoginAdmin {
+	
+	@RequestMapping("loginAdmin")
+	public String loginAdmin() {
+		return "loginAdmin";
+	}
+	
+	@RequestMapping("identificarAdmin")
+	public String identificarAdmin(String pass,HttpServletRequest request) {
+		if(pass.equals("123")) {
+			request.getSession().setAttribute("admin", "ok");
+		}
+		
+	}
+	
+}

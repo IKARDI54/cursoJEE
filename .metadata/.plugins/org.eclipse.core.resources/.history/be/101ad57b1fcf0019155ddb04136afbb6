@@ -1,0 +1,10 @@
+package ejemploExternalizarStrings;
+
+public class ProcesarFormulario {
+
+	public boolean validarNombreUsuario(String nombre) {
+		String errorNombre = "nombre incorrecto";
+		return true;
+	}
+	
+}

@@ -1,0 +1,26 @@
+package serviciosHibernate;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import modelo.Anuncio;
+
+@Service
+@Transactional
+public class ServicioAnunciosImpl implements ServicioAnuncios{
+
+	@Override
+	public void registrarAnuncio(Anuncio a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Anuncio> obtenerAnuncios() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

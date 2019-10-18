@@ -1,0 +1,14 @@
+package main;
+
+public abstract class Jugador implements Cloneable{
+	
+	public abstract void correr();
+	public abstract void parar();
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+	
+}

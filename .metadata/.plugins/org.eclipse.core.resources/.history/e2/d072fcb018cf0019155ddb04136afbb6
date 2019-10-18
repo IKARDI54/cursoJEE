@@ -1,0 +1,20 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//definicion de los elementos de la cadena
+		Director ana = new Director();
+		Vicepresidente luis = 
+				new Vicepresidente();
+		Presidente mario = 
+				new Presidente();
+		//montar los elementos de la cadena
+		ana.setSucesor(luis);
+		luis.setSucesor(mario);
+		
+		
+		
+	}
+
+}

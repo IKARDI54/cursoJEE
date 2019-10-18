@@ -1,0 +1,7 @@
+package main;
+
+//esta es la clase que actua como DECORATOR
+public class EntrenadorPersonal {
+	
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Este es el archivo de configuracion de spring,  -->
+<!-- aqui diremos que objetos hay en el contenedor de spring. -->
+<!-- Por cada objeto tenemos que tener en este archivo una  -->
+<!-- etiqueta bean. -->
+
+<bean id="peliculasDAO" 
+	class="beans.PeliculasDAOmysqlImpl"/>
+<!-- Lo anterior es analogo a: -->
+<!-- PeliculasDAOImpl peliculasDAO = new PeliculasDAOImpl(); -->
+
+</beans>
+
+
+

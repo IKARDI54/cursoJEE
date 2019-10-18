@@ -1,0 +1,20 @@
+INDEX VERSION 1.4+E:\IKA PC\Documents\curso_java\cursoJEE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1990572331.index
+439032639.index
+596781033.index
+3066786221.index
+1778347220.index
+2356532995.index
+2737787880.index
+2200062597.index
+2087469533.index
+365999927.index
+271191419.index
+2501153035.index
+4040194728.index
+150264745.index
+472200568.index
+57367688.index
+3421449121.index
+2147559121.index
+1843637432.index

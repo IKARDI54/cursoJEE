@@ -1,0 +1,5 @@
+package interceptores;
+
+public class InterceptorAdmin {
+
+}

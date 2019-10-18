@@ -1,0 +1,9 @@
+package main;
+
+public class Apuesta {
+
+	private int id;
+	private int idUsuario;
+	private double cantidad;
+	
+}

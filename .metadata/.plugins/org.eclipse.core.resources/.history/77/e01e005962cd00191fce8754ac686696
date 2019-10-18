@@ -1,0 +1,24 @@
+package main;
+
+public class Apuesta {
+
+	private int id;
+	private int idUsuario;
+	private double cantidad;
+	private String nombreJuego;
+	
+	public Apuesta() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Apuesta(int id, int idUsuario, double cantidad, String nombreJuego) {
+		super();
+		this.id = id;
+		this.idUsuario = idUsuario;
+		this.cantidad = cantidad;
+		this.nombreJuego = nombreJuego;
+	}
+	
+	
+	
+}

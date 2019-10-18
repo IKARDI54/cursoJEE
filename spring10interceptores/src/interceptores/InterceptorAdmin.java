@@ -1,0 +1,23 @@
+package interceptores;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class InterceptorAdmin extends HandlerInterceptorAdapter{
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		Object admin = 
+				request.getSession().getAttribute("admin");
+		if(admin != null) {
+			return true;
+		}else {
+			response.sendRedirect("loginAdmin");
+			return false;
+		}
+	}//end preHandle
+	
+}

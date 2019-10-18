@@ -1,0 +1,9 @@
+package main;
+
+public abstract class Estadio {
+
+	public void comenzarJuego() {
+		
+	}
+	
+}

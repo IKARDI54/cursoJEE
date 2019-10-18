@@ -1,0 +1,11 @@
+package main;
+
+public class GestorArchivosVideo {
+	//inicio singleton
+	private GestorArchivosVideo() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//fin singleton
+	//resto de codigo de la clase
+}

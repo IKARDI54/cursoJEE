@@ -1,0 +1,15 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//hasta ahora hemos dicho que u es un objeto 
+		//de la clase usuario y eso es totalmente cierto.
+		Usuario u = new Usuario("ana","ana@gmail.com");
+		//pero realmente u es una referencia.
+		Usuario u2 = u;
+		
+	}
+
+}
